@@ -4,21 +4,12 @@ public class MainClass {
 
 	public static void main(String[] args) {
 
-		// 
-		System.out.println("bunlari Aydan yazib");
-		
-		
-		
-		// bu kodlari  YAlizada useri yazib
-		
-		// bu proqram iki ededi cemleyir
-		int a=12;
-		int b=33;
-		
-		int cem=a+b;
-		// cem in ekrana yazilmasi
-		System.out.println(cem);
-		
+		 System.out.println("Salam Dunya");
+		 
+		 
+		 System.out.println("nuray00r89 - deyisiklik etdi");
+		 
+		 
 	}
 
 }
