@@ -3,15 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <title>todolist web front</title>
-    <script type="text/javascript" src="script.js">
-
-    </script>
+    <link rel="stylesheet" href="style.css" />
+   
 </head>
 <body>
+     
     Task: <input type="text" id="task" value="python oyren" />
     Day: <input type="number" id="day" value="1" />
+    Register date: <input type="date" id="registerDate"  />
+   Category:  <select id="category">
+<option> Learn  </option>
+<option> Home  </option>
+<option> Car  </option>
+    </select><button onclick="onCreateCategory()">+</button>
     <hr>
     <button onclick="onAddTask()">Add task</button>
+ 
     <hr>
     <table>
         <thead>
@@ -19,12 +26,19 @@
                 <th>ID</th>
                 <th>Task</th>
                 <th>Day</th>
+                <th>Register Date</th>
+                <th>Category</th>
             </tr>
         </thead>
 <tbody id="tbody">
  <tr></tr>
 </tbody>
     </table>
+
+    <script type="text/javascript" src="script.js">
+
+    </script>
+
 </body>
 
 </html>

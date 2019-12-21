@@ -1,28 +1,60 @@
-
+var idIndex=0;
+ 
 
 function onAddTask() {
-// id-si task olan elemetin deyerini task deyisenine menimset
-var task=document.getElementById('task').value;// var task='java oyren';
+var task=document.getElementById('task').value;
 var day=document.getElementById('day').value;
-// yeni tr elementi yarat
+var registerDate=document.getElementById('registerDate').value;
+var category=document.getElementById('category').value;
 var tr = document.createElement('tr');
-// id-si tbody olan elementi tbody deyisenine menimsedir
-var tbody=document.getElementById('tbody');
-// tr elementini tbody-ye eleve edir
-tbody.appendChild(tr);
-// yeni td elementi yaradir ve onu tdTask deyisenine menimsedir 
-var tdTask=document.createElement('td');
-// tdTask elementinin daxiline task deyiseninde olan deyeri daxil edir.
-tdTask.innerHTML=task;
-// tdTask elementini tr elementine daxil edir
  
+var tbody=document.getElementById('tbody');
+
+tbody.appendChild(tr);
+
+var tdTask=document.createElement('td');
+
+tdTask.innerHTML=task;
+
 var tdId=document.createElement('td');
-tdId.innerHTML='1';// burada ki olan default 1 deyerini avtomatik artana cevirek,
+tdId.innerHTML=++idIndex;
 
 var tdDay=document.createElement('td');
 tdDay.innerHTML=day;
 
+var tdRegisterDate=document.createElement('td');
+tdRegisterDate.innerHTML=registerDate;
+
+var tdCategory=document.createElement('td');
+tdCategory.innerHTML=category;
+
 tr.appendChild(tdId);
 tr.appendChild(tdTask);
 tr.appendChild(tdDay);
+tr.appendChild(tdRegisterDate);
+tr.appendChild(tdCategory);
+}
+function onCreateCategory(){
+var newCategory=prompt('yeni kateqoriyanin adini daxil edin','k2');
+
+  var category=document.createElement('option');
+  category.innerHTML=newCategory;
+  var categories=document.getElementById('category');
+  var allCategoryOptions=categories.getElementsByTagName('option');
+var size=allCategoryOptions.length;
+var thisAlreadyInList=false;
+for(var i=0;i<size;i++){
+    if(newCategory.toLowerCase()==allCategoryOptions[i].innerHTML.trim().toLowerCase()){
+        thisAlreadyInList=true;
+        break;
+    }
+}
+if(thisAlreadyInList){
+    alert('bu artiq var');
+}else{
+    if(newCategory==''){
+        alert('bos qoymayin');
+    }else{
+        categories.appendChild(category);
+    }}
 }
