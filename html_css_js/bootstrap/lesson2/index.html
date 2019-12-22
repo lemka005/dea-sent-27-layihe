@@ -22,16 +22,35 @@
 <body  >
 
       
-<div class="container">
-       <form action="/action_page.php">
-          <div class="form-group">
-            <input type="range" class="form-control-range" step="0" name="range">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="http://164.68.100.161:8080/filedownload/files/s1.PNG" alt="Los Angeles" width="1100" height="500">
           </div>
-          <div class="form-group">
-            <input type="file" class="form-control-file border" name="file">
+          <div class="carousel-item">
+            <img src="https://lunchway.az/wp-content/uploads/2018/10/IMG_1902-420x630.jpg" alt="Chicago" width="1100" height="500">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+          <div class="carousel-item">
+            <img src="https://lunchway.az/wp-content/uploads/2016/07/IMG_0483-420x630.jpg" alt="New York" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
       
  
