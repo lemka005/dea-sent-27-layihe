@@ -16,31 +16,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 
-    <script>
-        var begin = 0;
-        function f1() {
-            setInterval(() => {
-                begin++;
-                if (begin > 100) {
-                    begin = 100;
-                }
-                document.getElementById('d1').style.width = begin + '%';
-                document.getElementById('p1').innerHTML = begin + '%';
-            }, 100);
-        }
-
-    </script>
+     
 </head>
 
 <body>
-    <div class="progress">
-        <div id="d1" class="
-        progress-bar progress-bar-striped
-         progress-bar-animated"></div>
-    </div>
-    <hr>
-    <p id="p1"></p>
-    <button onclick="f1()">start progress</button>
+        <div class="spinner-border"></div>
 </body>
 
 </html>
