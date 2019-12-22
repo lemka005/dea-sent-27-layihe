@@ -23,25 +23,18 @@
 
       
 <div class="container">
-        <form action="/action_page.php">
-          <div class="form-check">
-            <label class="form-check-label" for="check1">
-              <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>Option 1
-            </label>
+       <form action="/action_page.php">
+          <div class="form-group">
+            <input type="range" class="form-control-range" step="0" name="range">
           </div>
-          <div class="form-check">
-            <label class="form-check-label" for="check2">
-              <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Option 2
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input" disabled>Option 3
-            </label>
+          <div class="form-group">
+            <input type="file" class="form-control-file border" name="file">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+      
+ 
         </body>
 
 </html>
