@@ -32,15 +32,19 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Əlaqə</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link" target="products_frame" href="customer-products.html">Satışda olan məhsullar</a>
+        </li>
+
     </ul>
   </nav>
 
 
 <div class="container" style="margin-top: 10px;">
     <div class="row">
-        <div class="col-sm-4" id="productContainer">
-              
 
+
+        <div class="col-sm-4" id="productContainer"> 
                         <div class="card" style="width:100%" id="productTemplate">
                         
                           <img class="card-img-top" 
@@ -52,16 +56,12 @@
                             <p class="card-text">5 [AZN]</p>
                             <a href="#" class="btn btn-primary" onclick="addToBasket(1)">Səbətə</a>
                             
-                          </div>
-                          
-                        </div>
- 
-
-                        
-
-
-         
+                          </div> 
+                        </div> 
     </div>
+
+
+
     <div class="col-sm-8">
         Ad : <input type="text" id="name" class="form-control"  />
         Şəkil : <input type="text" id="image" class="form-control" />
@@ -69,7 +69,19 @@
         Təsvir : <input type="text" id="description" class="form-control" />
         <button onclick="createNewProduct()" class="btn btn-primary" style="margin-top: 5px;">Məhsul əlavə et</button>
     </div>
+  </div>
+
+ 
+<div class="row">
+  <button onclick="getAllProducts()">Məhsulları yüklə</button>
+    <div class="col-sm-12" id="products">
+
+
+
+    </div>
 </div>
 
+ </div>
+ 
 </body>
 </html>
