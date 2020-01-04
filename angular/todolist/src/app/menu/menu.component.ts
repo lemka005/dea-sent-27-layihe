@@ -8,5 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent   {
  
  menu:string='menu1';
-
+ 
+onButtonPressed(){
+  
+   this.menu='Angular';
+}
 }
