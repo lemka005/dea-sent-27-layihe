@@ -48,5 +48,7 @@ this.todos.push(todo);
   this.todoId=this.todos[counter].id;
   this.index=counter;
   }
-
+  onResetTodo(){
+    this.todoId=0;
+  }
 }
