@@ -8,6 +8,8 @@
  <label for="register">Register :</label>
  <input [(ngModel)]="register" type="date"  class="form-control" id="register"/>
 
+ <label for="status">Status :</label>
+ <input [(ngModel)]="status" type="text"  class="form-control" id="status"/>
 
 <button style="margin-top: 10px;" class="btn btn-success" (click)="onSaveTodo()">Save</button>
 <hr>
@@ -25,12 +27,13 @@
             <td>{{t.id}}</td>
             <td>{{t.todo}}</td>
             <td>{{t.day}}</td>
-            <td>{{t.register | date:'yyyy-MM-dd HH:mm:ss.sss'}}</td>
+            <td>{{t.register | date:'yyyy-MM-dd HH'}}</td>
             <td>{{t.status}}</td>
             <td>
                 
                 <button class="btn btn-danger" (click)="onDeleteTodo(counter)">Delete</button>
-                <button style="margin-left: 5px;" class="btn btn-primary" (click)="onUpdateTodo(counter)">Update</button>
+                <button style="margin-left: 5px;" class="btn btn-primary"
+                (click)="onUpdateTodo(counter)">Update</button>
             
             </td>
         </tr>
