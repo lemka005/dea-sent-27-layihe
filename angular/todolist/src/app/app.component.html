@@ -23,7 +23,7 @@
         
     </tr></thead>
     <tbody>
-        <tr *ngFor="let t of todos;let counter=index">
+        <tr [ngStyle]="(t.id==todoId) && {'background-color': 'red'}" *ngFor="let t of todos;let counter=index">
             <td>{{t.id}}</td>
             <td>{{t.todo}}</td>
             <td>{{t.day}}</td>
