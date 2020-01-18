@@ -38,6 +38,8 @@ export class TestComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   
+
   }
   shuffleQuestions() {
     this.studentQuestions=[];
@@ -50,6 +52,23 @@ export class TestComponent implements OnInit {
       studentQuestion.question=this.questions[a];
      this.studentQuestions.push(studentQuestion);
     }
+    this.studentQuestionsOrginal=this.studentQuestions.slice();
+  }
+
+  search:string='';
+  studentQuestionsOrginal:StudentQuestion[]=[];
+  searchMethod(){
+  let studentQuestions:StudentQuestion[]=[];
+  this.studentQuestions=this.studentQuestionsOrginal.slice();
+  for (let index = 0; index < this.studentQuestions.length; index++) {
+    const element = this.studentQuestions[index];
+    if(element.student.startsWith(this.search)){
+      studentQuestions.push(element);
+    }
+    
+  }
+
+  this.studentQuestions=studentQuestions;
 
   }
 }

@@ -2,7 +2,8 @@
     Suallari dagit
 </button>
 <hr>
-
+<input class="form-control" [(ngModel)]="search" (input)="searchMethod()" type="text" placeholder="Search..">
+<hr>
 <table class="table">
     <thead>
         <tr>
@@ -10,7 +11,7 @@
             <th>Sual</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="myTable">
         <tr *ngFor="let q of studentQuestions">
             <td>
                 {{q.student}}
@@ -21,3 +22,5 @@
         </tr>
     </tbody>
 </table>
+
+ 
