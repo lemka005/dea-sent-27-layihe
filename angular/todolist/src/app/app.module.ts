@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TestComponent } from './component/test/test.component';
 import { TodolistComponent } from './component/todolist/todolist.component';
+import { ClassTestComponent } from './component/class-test/class-test.component';
  
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    TodolistComponent 
+    TodolistComponent,
+    ClassTestComponent 
   ],
   imports: [
     BrowserModule,
