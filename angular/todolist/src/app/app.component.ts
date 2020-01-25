@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
     'is gormek isteyirsinizse bura yazin');
 
     this.todosOriginal=this.todos.slice();
+
+    this.audio.src = "../assets/ses.wav";
+      this.audio.load();
   }
    todo:string='';
    day:number;
@@ -75,5 +78,20 @@ this.todos=[];
       }
     }
 
+  }
+    audio = new Audio();
+  seslendir(){
+    
+     
+      
+      this.audio.play();
+   
+  }
+  sesiDayandir(){
+    this.audio.pause();
+  }
+  sesiDayandir2(){
+  this.audio.load();
+  this.audio.play();
   }
 }
