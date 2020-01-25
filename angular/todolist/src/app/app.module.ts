@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TestComponent } from './component/test/test.component';
+import { TodolistComponent } from './component/todolist/todolist.component';
  
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent 
+    TestComponent,
+    TodolistComponent 
   ],
   imports: [
     BrowserModule,
