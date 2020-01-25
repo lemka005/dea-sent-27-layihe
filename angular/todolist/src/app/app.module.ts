@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { TestComponent } from './component/test/test.component';
 import { TodolistComponent } from './component/todolist/todolist.component';
 import { ClassTestComponent } from './component/class-test/class-test.component';
+import { DatePipe } from '@angular/common';
  
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ClassTestComponent } from './component/class-test/class-test.component'
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/model/task';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-todolist',
@@ -7,11 +8,11 @@ import { Task } from 'src/app/model/task';
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent implements OnInit {
-  ngOnInit(): void {
-    console.log('bu komponentin daxilinde olan butun' +
-      'deyisenler yarandi ve, siz bu zaman ne' +
-      'is gormek isteyirsinizse bura yazin');
+  constructor(private datePipe:DatePipe){
 
+  }
+  ngOnInit(): void {
+    
     
 
     this.audio.src = "../../assets/ses.wav";
@@ -34,6 +35,21 @@ t2.register=date2;
 t2.status=' note done';
 
     this.todos.push(t1,t2);
+
+
+    for (let index = 0; index < this.todos.length; index++) {
+      const t = this.todos[index];
+    
+      t.register=new Date(this.datePipe.transform(t.register, 'yyyy-MM-dd'));
+      console.log(t.register)
+    
+       
+     
+    
+    }
+
+    
+
     this.todosOriginal = this.todos.slice();
   }
    todo:Task=new Task(0);
@@ -52,11 +68,13 @@ t2.status=' note done';
 
       this.todos.push(todo);
     } else {
-
+ 
       this.todos[this.index]  = this.todo;
      
     }
 this.todo=new Task(0);
+
+
     this.todosOriginal = this.todos.slice();
   }
 
@@ -83,7 +101,7 @@ this.todo=new Task(0);
     for (let index = 0; index < todos.length; index++) {
       const t = todos[index];
       let s = t.todo + t.day + t.register + t.status;
-      console.log(s);
+      
       if (s.includes(this.searchText)) {
         this.todos.push(t);
       }
