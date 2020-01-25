@@ -12,7 +12,7 @@ export class TodolistComponent implements OnInit {
       'deyisenler yarandi ve, siz bu zaman ne' +
       'is gormek isteyirsinizse bura yazin');
 
-    this.todosOriginal = this.todos.slice();
+    
 
     this.audio.src = "../../assets/ses.wav";
     this.audio.load();
@@ -34,7 +34,7 @@ t2.register=date2;
 t2.status=' note done';
 
     this.todos.push(t1,t2);
-
+    this.todosOriginal = this.todos.slice();
   }
    todo:Task=new Task(0);
   todoId: number = 0;
@@ -74,11 +74,11 @@ this.todo=new Task(0);
     this.todoId = 0;
   }
 
-  todosOriginal = [];
+  todosOriginal:Task[] = [];
   searchText: string = '';
   search() {
 
-    let todos = this.todosOriginal.slice();
+    let todos:Task[] = this.todosOriginal.slice();
     this.todos = [];
     for (let index = 0; index < todos.length; index++) {
       const t = todos[index];
