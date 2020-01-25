@@ -14,7 +14,9 @@
 
             <button style="margin-top: 10px;" class="btn btn-success" (click)="onSaveTodo()">Save</button><button
                 style="margin-top: 10px;" class="btn btn-secondary" (click)="onResetTodo()">Reset</button>
-            <hr>
+           <input type="text" [(ngModel)]="searchText"
+           (input)="search()" />
+                <hr>
             <table class="table">
                 <thead>
                     <tr>

@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    console.log('bu komponentin daxilinde olan butun'+ 
+    'deyisenler yarandi ve, siz bu zaman ne'+
+    'is gormek isteyirsinizse bura yazin');
+
+    this.todosOriginal=this.todos.slice();
+  }
    todo:string='';
    day:number;
    register:Date=new Date();
@@ -32,15 +39,16 @@ this.todos.push(todo);
   this.todos[this.index].status=this.status;
 }
 
-   
+this.todosOriginal=this.todos.slice();
   }
 
   onDeleteTodo(counter:number){
     this.todos.splice(counter,1);
+    this.todosOriginal=this.todos.slice();
   }
 
   onUpdateTodo(counter:number){
-  
+   
     this.todo=this.todos[counter].todo;
     this.day=this.todos[counter].day;
     this.register=this.todos[counter].register;
@@ -50,5 +58,22 @@ this.todos.push(todo);
   }
   onResetTodo(){
     this.todoId=0;
+  }
+
+  todosOriginal=[];
+  searchText:string='';
+  search(){
+     
+    let todos=this.todosOriginal.slice();
+this.todos=[];
+    for (let index = 0; index < todos.length; index++) {
+      const t = todos[index];
+      let s=t.todo+t.day+t.register+t.status;
+      console.log(s);
+      if(s.includes(this.searchText)){
+        this.todos.push(t);
+      }
+    }
+
   }
 }
