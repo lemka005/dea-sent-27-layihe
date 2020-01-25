@@ -7,15 +7,15 @@
     <div class="row">
         <div class="col-sm-12">
             <label for="todo">Task :</label>
-            <input id="todo" [(ngModel)]="todo" class="form-control" />
+            <input id="todo" [(ngModel)]="todo.todo" class="form-control" />
             <label for="day">Day :</label>
-            <input id="day" [(ngModel)]="day" type="number" class="form-control" />
+            <input id="day" [(ngModel)]="todo.day" type="number" class="form-control" />
             <label for="register">Register :</label>
-            <input [ngModel]="register | date:'yyyy-MM-dd'" (ngModelChange)="register = $event" type="date"
+            <input [ngModel]="todo.register | date:'yyyy-MM-dd'" (ngModelChange)="todo.register = $event" type="date"
                 class="form-control" id="register" />
 
             <label for="status">Status :</label>
-            <input [(ngModel)]="status" type="text" class="form-control" id="status" />
+            <input [(ngModel)]="todo.status" type="text" class="form-control" id="status" />
 
             <button style="margin-top: 10px;" class="btn btn-success" (click)="onSaveTodo()">Save</button><button
                 style="margin-top: 10px;" class="btn btn-secondary" (click)="onResetTodo()">Reset</button>
