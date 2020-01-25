@@ -19,7 +19,7 @@
 
             <button style="margin-top: 10px;" class="btn btn-success" (click)="onSaveTodo()">Save</button><button
                 style="margin-top: 10px;" class="btn btn-secondary" (click)="onResetTodo()">Reset</button>
-           <input type="text" [(ngModel)]="searchText"
+           <input type="text" class="form-control" [(ngModel)]="searchText"
            (input)="search()" />
                 <hr>
             <table class="table">
