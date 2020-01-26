@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bindable.component.css']
 })
 export class BindableComponent implements OnInit {
-
+name:string='Əli';
   constructor() { }
 
   ngOnInit() {
   }
-
+  sayHello(){
+    alert('Hello : '+this.name);
+  }
 }
