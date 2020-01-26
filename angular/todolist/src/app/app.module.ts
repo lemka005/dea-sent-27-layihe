@@ -8,13 +8,15 @@ import { TestComponent } from './component/test/test.component';
 import { TodolistComponent } from './component/todolist/todolist.component';
 import { ClassTestComponent } from './component/class-test/class-test.component';
 import { DatePipe } from '@angular/common';
+import { BindableComponent } from './component/bindable/bindable.component';
  
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     TodolistComponent,
-    ClassTestComponent 
+    ClassTestComponent,
+    BindableComponent 
   ],
   imports: [
     BrowserModule,
