@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/app/model/task';
+ 
 import { DatePipe } from '@angular/common';
+import { Task } from 'src/app/model/task';
 
 @Component({
   selector: 'app-todolist',

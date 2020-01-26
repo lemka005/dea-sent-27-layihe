@@ -1,2 +1,7 @@
 <input type="text" [(ngModel)]="name" />
-<button (click)="sayHello()">Say hello</button>
+<button  *ngIf="show"   (click)="sayHello()">Say hello</button><br>
+<hr>
+<br>
+<img [src]="sekilim" />
+
+<button (click)="sekiliDeyis()" >deyis</button>

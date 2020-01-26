@@ -10,70 +10,109 @@ export class TestComponent implements OnInit {
   questions: string[] = [
     "What is angular?",
 
-    "Versions of angular?",
+"Versions of angular",
 
-    "Angular by google?",
+"Angular by google",
 
-    "Javascript frameworks?",
+"Javascript frameworks",
 
-    "Why we should learn angular?",
-    "How to develop angular applications?",
+"Why we should learn angular?",
 
-    "Angular development environment?",
+"How to develop angular applications?",
 
-    "Install Node JS for angular?",
+"Angular development environment",
 
-    "What is npm?",
+"Install Node JS for angular",
 
-    "Install angular cli?",
+"What is npm?",
 
-    "What is cli?",
+"Install angular cli",
 
-    "Create brand new angular project?",
+"What is cli?",
 
-    "Run angular application?",
+"Create brand new angular project",
 
-    "Run angular application in different port address?",
+"Run angular application",
 
-    "Edit angular application with IDE?",
+"Run angular application in different port address",
 
-    "Install Visual Studio Code for editing angular applications",
+"Edit angular application with IDE",
 
-    "Angular uses typescript instead of javascript",
+"Install Visual Studio Code for editing angular applications",
 
-    "What is typescript",
+"Angular uses typescript instead of javascript",
 
-    "What is difference between typescript and javascript?",
+"What is typescript?",
 
-    "Typescript basics",
+"What is difference between typescript and javascript?",
 
-    "Create arrays in typescript",
+"Typescript basics",
 
-    "Typescript is strong typed",
+"Create arrays in typescript",
 
-    "let and const in typescript",
+"Typescript is strong typed",
 
-    "Using classes in typescript ",
-    "  angular proqram yazmaq ucun hansi proqrami qururuq?",
-    "angular cli-i qurmaq ucun hansi komandani yaziriq?",
-    "angular-da yeni proyekti nece yaradiriq?",
-    "angular proyekti hansi proqram vasitesile redakte edirik?",
-    "angular proqrami run etmek ucun ne edirik?",
-    "run olmus angular proqrami nece ise saliriq?",
-    "string interpolation nedir?",
-    "2 way data binding nedir?",
-    "ngModel nedir?",
-    "*ngIf ne ucundur?",
-    "dovrun sintaksisi necedir?",
-    "dovrun daxilinde olan saygacin sintaksisi necedir?",
-    "angular proyekte bootstrap qurmaq ucun hansi addimlari edirik?",
-    "angular-da komponent nedir ve ne ucun istifade olunur?",
-    "angular-da komponentlerin istifade qaydalarini goster",
-    "komponent selector nedir?",
-    "ngModel - i istifade etmek ucun hansi modulu ve nece import etmek lazimdir?",
-    "angular-da komponent-de nece eded css qosmaq olar?",
-    "styles.css fayli ne ucundur?",
-    "ngStyle propertisinin sintaksisi necedir?"
+"let and const in typescript",
+
+"Using classes in typescript",
+
+"Angular framework specifications",
+
+"Overview of project files",
+
+"main.ts file",
+
+"node_modules folder",
+
+"angular.json file",
+
+"package.json file",
+
+"src folder",
+
+"assets folder",
+
+"app.modules.ts file",
+
+"main component",
+
+"Create new component manually and with CLI",
+
+"component css, html, ts files deeper",
+
+"How to create angular component from class",
+
+"What is selector?",
+
+"What is templateUrl?",
+
+"What is styleUrls?",
+
+"How to import another classes to component?",
+
+"Working with component templates",
+
+"Working with component styles",
+
+"Databinding in Angular",
+
+"One way databinding (string interpolation, property binding)",
+
+"Event binding",
+
+"Two way databinding",
+
+"bindable properties and events",
+
+"Create button element and click event",
+
+"Install Bootstrap framework to Angular with npm",
+
+"Change button style to look better",
+
+"(input) event and cast",
+
+"($event) syntax "
 
   ];
 
@@ -124,7 +163,7 @@ rand=0.94;
 
       }
 
-      if (buVarmi || !question.endsWith("?")) {
+      if (buVarmi  ) {
         console.log("continue");
         continue;
         
