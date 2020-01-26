@@ -1,1 +1,14 @@
-<p>quiz works!</p>
+
+
+<ol>
+    <li *ngFor="let q of questions">
+        {{q.question}}<br>
+        <span *ngFor="let a of q.answers">
+            <input type="radio"  />
+    {{a.answer}} 
+        </span>
+
+ 
+
+    </li>
+</ol>
