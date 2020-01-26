@@ -9,6 +9,7 @@ import { TodolistComponent } from './component/todolist/todolist.component';
 import { ClassTestComponent } from './component/class-test/class-test.component';
 import { DatePipe } from '@angular/common';
 import { BindableComponent } from './component/bindable/bindable.component';
+import { QuizComponent } from './component/quiz/quiz.component';
  
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BindableComponent } from './component/bindable/bindable.component';
     TestComponent,
     TodolistComponent,
     ClassTestComponent,
-    BindableComponent 
+    BindableComponent,
+    QuizComponent 
   ],
   imports: [
     BrowserModule,
