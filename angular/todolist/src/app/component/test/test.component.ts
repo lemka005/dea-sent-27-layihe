@@ -150,7 +150,9 @@ rand=0.94;
     this.studentQuestions = this.studentQuestionsOrginal.slice();
     for (let index = 0; index < this.studentQuestions.length; index++) {
       const element = this.studentQuestions[index];
-      if (element.student.includes(this.search)) {
+      let awesome='';
+      awesome+= element.student+element.question;
+      if (awesome.includes(this.search)) {
         studentQuestions.push(element);
       }
 
