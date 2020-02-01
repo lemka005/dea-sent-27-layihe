@@ -3,7 +3,7 @@ export class Question {
     public question: string;
     public answers: Answer[] = [];
     public studentAnswer: string;
-    public correct:boolean=false;// bu property telebenin bu suala duz cavab verib,
+    public correct:number=1;// bu property telebenin bu suala duz cavab verib,
     // vermediyini teyin etmek ucundur,
 
 }

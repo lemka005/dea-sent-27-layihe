@@ -1,6 +1,8 @@
 <ol>
-    <li *ngFor="let q of questions;let counter=index">
-        {{q.question}} - {{q.correct}}<br>
+    <li *ngFor="let q of questions;let counter=index" >
+       <span [ngStyle]="{'background-color':getBackColor(q.correct)}">
+           {{q.question}}
+       </span>  - {{q.correct}}<br>
         <span *ngFor="let a of q.answers">
             <input type="radio" [name]="q.id" 
             [(ngModel)]="a.studentAnswer"
