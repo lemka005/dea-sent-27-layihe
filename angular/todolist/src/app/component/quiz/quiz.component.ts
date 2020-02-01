@@ -34,4 +34,8 @@ this.questions=this.questionService.questions.slice();
     alert('neticen = '+totalPoint);
 
   }
+
+  answerSelected(counter:number,a:string){
+    this.questions[counter].studentAnswer=a;
+  }
 }

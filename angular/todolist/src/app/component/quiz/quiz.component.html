@@ -1,10 +1,11 @@
 <ol>
-    <li *ngFor="let q of questions">
+    <li *ngFor="let q of questions;let counter=index">
         {{q.question}}<br>
         <span *ngFor="let a of q.answers">
             <input type="radio" [name]="q.id" 
             [(ngModel)]="a.studentAnswer"
             [value]="a.answer"
+            (click)="answerSelected(counter,a.answer)"
             />
             {{a.answer}}
         </span>
