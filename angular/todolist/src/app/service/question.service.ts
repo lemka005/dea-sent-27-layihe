@@ -24,9 +24,18 @@ export class QuestionService {
       new Answer('43', false), new Answer('44', true));
 
 
+      let q3: Question = new Question();
+      q3.question = 'npm nedir?';
+      q3.id = 3;
+      q3.studentAnswer = '';
+      q3.answers.push(new Answer('node package manager', true),
+        new Answer('niye paket menimdir', false), new Answer('niye p azdir', false));
+  
+
+        
 
 
-      this.questions.push(q1,q2);
+      this.questions.push(q1,q2,q3);
 
   }
 }
