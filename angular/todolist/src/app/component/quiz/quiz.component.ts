@@ -25,7 +25,9 @@ this.questions=this.questionService.questions.slice();
       for (let index2 = 0; index2 < q.answers.length; index2++) {
         const a = q.answers[index2];
         if(a.correct && a.answer==q.studentAnswer){
-          totalPoint++; break;
+          totalPoint++;
+          q.correct=true;
+          break;
         }
         
       }
