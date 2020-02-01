@@ -31,11 +31,18 @@ export class QuestionService {
       q3.answers.push(new Answer('node package manager', true),
         new Answer('niye paket menimdir', false), new Answer('niye p azdir', false));
   
+   let q4: Question = new Question();
+      q4.question = 'cli nedir?';
+      q4.id = 4;
+      q4.studentAnswer = '';
+      q4.answers.push(new Answer('npm', false),
+        new Answer('com li int', true)  );
+  
 
         
 
 
-      this.questions.push(q1,q2,q3);
+      this.questions.push(q1,q2,q3,q4);
 
   }
 }

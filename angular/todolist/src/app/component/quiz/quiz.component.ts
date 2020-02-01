@@ -41,8 +41,8 @@ q.correct=3;
       }
     }
 
-    alert('neticen = '+totalPoint);
-
+    //alert('neticen = '+totalPoint);
+    this.totalPoint=totalPoint;
   }
 
   answerSelected(counter:number,a:string){
@@ -58,5 +58,19 @@ q.correct=3;
       color='red';
     }
     return color;
+  }
+
+  totalPoint:number=0;
+  calculatePercent(){
+    let questionSize=this.questions.length;
+    let totalPercent=this.totalPoint*100/questionSize;
+
+    if(totalPercent<=50){
+    return false;
+    }else{
+    
+    return true;
+    
+    }
   }
 }

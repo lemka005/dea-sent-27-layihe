@@ -1,6 +1,7 @@
 <ol>
     <li *ngFor="let q of questions;let counter=index" >
-       <span [ngStyle]="{'background-color':getBackColor(q.correct)}">
+       <span [ngStyle]=
+       "{'background-color':getBackColor(q.correct)}">
            {{q.question}}
        </span>  - {{q.correct}}<br>
         <span *ngFor="let a of q.answers">
@@ -20,3 +21,5 @@
 <button (click)="onSeeResults()">
     See Results
 </button >
+<hr>
+<p [ngClass]="calculatePercent() ? 'yasil' : 'qirmizi'">Netice : {{totalPoint}}</p>
