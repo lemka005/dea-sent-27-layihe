@@ -13,7 +13,7 @@ export class QuestionService {
     q1.id = 1;
     q1.studentAnswer = '';
     q1.answers.push(new Answer('25', false),
-      new Answer('26', true), new Answer('27', false));
+      new Answer('26', true), new Answer('27', false), new Answer('44', false));
 
 
       let q2: Question = new Question();
