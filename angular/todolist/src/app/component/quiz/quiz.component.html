@@ -1,14 +1,19 @@
-
-
 <ol>
     <li *ngFor="let q of questions">
         {{q.question}}<br>
         <span *ngFor="let a of q.answers">
-            <input type="radio"  />
-    {{a.answer}} 
+            <input type="radio" [name]="q.id" 
+            [(ngModel)]="a.studentAnswer"
+            [value]="a.answer"
+            />
+            {{a.answer}}
         </span>
 
- 
+
 
     </li>
 </ol>
+<hr>
+<button (click)="onSeeResults()">
+    See Results
+</button >
