@@ -10,6 +10,7 @@ import { ClassTestComponent } from './component/class-test/class-test.component'
 import { DatePipe } from '@angular/common';
 import { BindableComponent } from './component/bindable/bindable.component';
 import { QuizComponent } from './component/quiz/quiz.component';
+import { MenuComponent } from './component/menu/menu.component';
  
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { QuizComponent } from './component/quiz/quiz.component';
     TodolistComponent,
     ClassTestComponent,
     BindableComponent,
-    QuizComponent 
+    QuizComponent,
+    MenuComponent 
   ],
   imports: [
     BrowserModule,
