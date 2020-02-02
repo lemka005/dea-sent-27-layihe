@@ -1,1 +1,42 @@
-<p>admin works!</p>
+<button>
+    Yeni Məhsul qeydiyyatı
+</button>
+İstifadəçi : {{username}}
+<br>
+
+<table class="table">
+<thead>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Ad
+        </th>
+        <th>
+            Qiymət
+        </th>
+        <th>
+            Şəkil
+        </th>
+
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of products">
+        <td >
+            {{p.id}}
+        </td>
+        <td >
+            {{p.name}}
+        </td>
+        <td >
+            {{p.price}}
+        </td>
+        <td >
+            <img [src]="p.image" />
+        </td>
+    </tr>
+</tbody>
+
+</table>
