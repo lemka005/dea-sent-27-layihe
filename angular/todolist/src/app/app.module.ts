@@ -13,6 +13,9 @@ import { QuizComponent } from './component/quiz/quiz.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { LoginComponent } from './component/login/login.component';
 import { LogoutComponent } from './component/logout/logout.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { ProductsComponent } from './component/products/products.component';
+import { OrdersComponent } from './component/orders/orders.component';
  
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { LogoutComponent } from './component/logout/logout.component';
     QuizComponent,
     MenuComponent,
     LoginComponent,
-    LogoutComponent 
+    LogoutComponent,
+    AdminComponent,
+    ProductsComponent,
+    OrdersComponent 
   ],
   imports: [
     BrowserModule,
