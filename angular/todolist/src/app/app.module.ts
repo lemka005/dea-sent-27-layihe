@@ -11,6 +11,8 @@ import { DatePipe } from '@angular/common';
 import { BindableComponent } from './component/bindable/bindable.component';
 import { QuizComponent } from './component/quiz/quiz.component';
 import { MenuComponent } from './component/menu/menu.component';
+import { LoginComponent } from './component/login/login.component';
+import { LogoutComponent } from './component/logout/logout.component';
  
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MenuComponent } from './component/menu/menu.component';
     ClassTestComponent,
     BindableComponent,
     QuizComponent,
-    MenuComponent 
+    MenuComponent,
+    LoginComponent,
+    LogoutComponent 
   ],
   imports: [
     BrowserModule,
