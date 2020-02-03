@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { LoginService } from 'src/app/service/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -9,8 +10,8 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class AdminComponent implements OnInit {
 username:string='';
-products:Product[]=[];
-  constructor(private ls:LoginService) { }
+
+  constructor(private ls:LoginService,private router:Router) { }
 
   ngOnInit() {
     this.username=this.ls.username;
@@ -32,5 +33,7 @@ p2.image='https://www.apple.com/newsroom/images/product/os/macos/standard/Apple-
 
     this.products.push(p1,p2);
   }
-
+  onCreateProduct(){
+this.router.navigate(['add-product']);
+  }
 }
