@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 username:string='';
-
+products:Product[]=[];
+  
   constructor(private ls:LoginService,private router:Router) { }
 
   ngOnInit() {
