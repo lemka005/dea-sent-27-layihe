@@ -17,6 +17,7 @@ import { AdminComponent } from './component/admin/admin.component';
 import { ProductsComponent } from './component/products/products.component';
 import { OrdersComponent } from './component/orders/orders.component';
 import { AddProductComponent } from './component/add-product/add-product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AddProductComponent } from './component/add-product/add-product.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [ DatePipe],
   bootstrap: [AppComponent]
