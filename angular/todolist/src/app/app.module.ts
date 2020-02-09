@@ -18,7 +18,10 @@ import { ProductsComponent } from './component/products/products.component';
 import { OrdersComponent } from './component/orders/orders.component';
 import { AddProductComponent } from './component/add-product/add-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- 
+import { MatInputModule, MatDialogModule, 
+  MatProgressSpinnerModule, MatButtonModule } 
+  from '@angular/material';
+   
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,9 +42,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule, MatDialogModule, 
+  MatProgressSpinnerModule, MatButtonModule
   ],
   providers: [ DatePipe],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[AddProductComponent]
 })
 export class AppModule { }
