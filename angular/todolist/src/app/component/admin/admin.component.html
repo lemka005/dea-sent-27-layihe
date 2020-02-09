@@ -31,7 +31,7 @@
             {{p.name}}
         </td>
         <td >
-            {{p.price}}
+            {{p.price | currency:'CAD' }}
         </td>
         <td >
             <img [src]="p.image" />
