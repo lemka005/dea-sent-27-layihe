@@ -22,6 +22,6 @@ products:Product[]=[];
     this.products=this.productService.products.slice();
   }
   onCreateProduct(){
-this.mat.open(AddProductComponent)
+this.mat.open(AddProductComponent);
   }
 }
